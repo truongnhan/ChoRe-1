@@ -147,6 +147,17 @@
       <LastGenOutput>AppResources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
+  <ItemGroup>
+    <Reference Include="dangky">
+      <HintPath>..\..\..\..\desktop\chore\choreapp\dll\dangky.dll</HintPath>
+    </Reference>
+    <Reference Include="login">
+      <HintPath>dll\login.dll</HintPath>
+    </Reference>
+    <Reference Include="search">
+      <HintPath>..\..\..\..\desktop\chore\choreapp\dll\search.dll</HintPath>
+    </Reference>
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).$(TargetFrameworkVersion).Overrides.targets" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
