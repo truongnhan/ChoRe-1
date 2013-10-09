@@ -17,9 +17,14 @@ namespace ChoReApp
         public MainPage()
         {
             InitializeComponent();
-
+            formlogin.clickSignUp+=formlogin_clickSignUp;
             // Sample code to localize the ApplicationBar
             //BuildLocalizedApplicationBar();
+        }
+
+        private void formlogin_clickSignUp()
+        {
+            chore.SelectedIndex = 2;
         }
 
         // Sample code for building a localized ApplicationBar

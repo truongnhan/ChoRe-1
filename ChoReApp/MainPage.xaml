@@ -40,21 +40,15 @@
          -->
 
         <!--TitlePanel contains the name of the application and page title-->
-        <phone:Pivot Title="MY APPLICATION">
-            <phone:Pivot.Background>
-                <LinearGradientBrush EndPoint="0.5,1"  StartPoint="0.5,0">
-                    <GradientStop Color="Black" Offset="1"/>
-                    <GradientStop Color="#FF7597D3"/>
-                </LinearGradientBrush>
-            </phone:Pivot.Background>
+        <phone:Pivot Name="chore" Title="MY APPLICATION" Background="#FF7597D3">
             <phone:PivotItem Header="Tìm sản phẩm" >
                 <Search:timkiem HorizontalAlignment="Left" Height="603" VerticalAlignment="Top" Width="456" Margin="0,-267,0,0"/>
             </phone:PivotItem>
-            <phone:PivotItem Header="Đăng Nhập" Margin="14,-51,10,79">
-                <Login:controllogin HorizontalAlignment="Left" Height="603" VerticalAlignment="Top" Width="456"/>
+            <phone:PivotItem  Header="Đăng Nhập" Margin="-83,-47,10,75">
+                <Login:controllogin Name="formlogin" HorizontalAlignment="Left" Height="632" VerticalAlignment="Top" Width="569" Margin="10,0,-26,-29"/>
             </phone:PivotItem>
             <phone:PivotItem Header="Đăng Ký" RenderTransformOrigin="0.956,0.022" Margin="10,0,14,28">
-                <DangKy:controldk HorizontalAlignment="Left" Height="603" VerticalAlignment="Top" Width="456" Margin="33,-31,-33,0"/>
+                <DangKy:controldk HorizontalAlignment="Left" Height="675" VerticalAlignment="Top" Width="497" Margin="-17,-56,-24,-16"/>
             </phone:PivotItem>
             <phone:PivotItem Header="Đăng sản phẩm"/>
             <phone:PivotItem Header="Chi tiết sản phẩm"/>
