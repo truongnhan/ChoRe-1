@@ -8,6 +8,7 @@
     xmlns:Login="clr-namespace:Login;assembly=Login"
     xmlns:DangKy="clr-namespace:DangKy;assembly=DangKy"
     xmlns:Search="clr-namespace:Search;assembly=Search"
+    xmlns:formPostGoods="clr-namespace:formPostGoods;assembly=formPostGoods"
     x:Class="ChoReApp.MainPage"
     mc:Ignorable="d"
     FontFamily="{StaticResource PhoneFontFamilyNormal}"
@@ -40,21 +41,58 @@
          -->
 
         <!--TitlePanel contains the name of the application and page title-->
-        <phone:Pivot Name="chore" Title="MY APPLICATION" Background="#FF7597D3">
+        <phone:Pivot x:Name="chore" Title="" Background="#FF7597D3">
             <phone:PivotItem Header="Tìm sản phẩm" >
-                <Search:timkiem HorizontalAlignment="Left" Height="603" VerticalAlignment="Top" Width="456" Margin="0,-267,0,0"/>
+                <Grid x:Name="viewgoods" Background="Transparent">
+                    <Search:timkiem HorizontalAlignment="Left" Height="603" VerticalAlignment="Top" Width="456" Margin="0,-267,0,0"/>
+                    <phone:LongListSelector  ItemsSource="{Binding item}"  x:Name="listgoods" HorizontalAlignment="Left" Height="483" Margin="20,94,0,0" VerticalAlignment="Top" Width="410">
+                        <phone:LongListSelector.ItemTemplate>
+                            <DataTemplate>
+                                <Grid x:Name="GridViewItem" Grid.Row="1">
+                                    <Image Source="avatar.jpg" HorizontalAlignment="Left" Height="125" Margin="10,10,0,0" VerticalAlignment="Top" Width="110"/>
+                                    <TextBlock Text="{Binding name}" HorizontalAlignment="Left" Margin="142,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="-1.131,-1.004" Width="304" Height="40"/>
+                                    <TextBlock Text="{Binding price}" HorizontalAlignment="Left" Margin="142,55,0,0" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="-1.131,-1.004" Width="304" Height="40"/>
+                                    <TextBlock HorizontalAlignment="Left" Margin="142,95,0,0" TextWrapping="Wrap" Text="{Binding link}" VerticalAlignment="Top" RenderTransformOrigin="-1.131,-1.004" Width="304" Height="40"/>
+
+                                </Grid>
+                            </DataTemplate>
+                        </phone:LongListSelector.ItemTemplate>
+                    </phone:LongListSelector>
+
+                </Grid>
             </phone:PivotItem>
             <phone:PivotItem  Header="Đăng Nhập" Margin="-83,-47,10,75">
-                <Login:controllogin Name="formlogin" HorizontalAlignment="Left" Height="632" VerticalAlignment="Top" Width="569" Margin="10,0,-26,-29"/>
+                <Login:controllogin x:Name="formlogin" HorizontalAlignment="Left" Height="632" VerticalAlignment="Top" Width="569" Margin="10,0,-26,-29"/>
             </phone:PivotItem>
             <phone:PivotItem Header="Đăng Ký" RenderTransformOrigin="0.956,0.022" Margin="10,0,14,28">
                 <DangKy:controldk HorizontalAlignment="Left" Height="675" VerticalAlignment="Top" Width="497" Margin="-17,-56,-24,-16"/>
             </phone:PivotItem>
-            <phone:PivotItem Header="Đăng sản phẩm"/>
+            <phone:PivotItem Header="Đăng sản phẩm">
+                <formPostGoods:formPost HorizontalAlignment="Left" Height="700" VerticalAlignment="Top" Width="515" Margin="-23,-102,-36,0"/>
+            </phone:PivotItem>
             <phone:PivotItem Header="Chi tiết sản phẩm"/>
             <phone:PivotItem Header="Sp trên map"/>
             <phone:PivotItem Header="Danh sách yêu thích"/>
-            <phone:PivotItem Header="Quên mật khẩu"/><!--hide -->
+            <phone:PivotItem Header="Quên mật khẩu">
+                <Grid x:Name="forgetpass" Background="Transparent">
+                    <Rectangle Fill="#FF1C41EA" HorizontalAlignment="Left" Height="63" Stroke="Black" VerticalAlignment="Top" Width="456" Margin="0,357,0,0"/>
+                    <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="eMail đăng ký :" VerticalAlignment="Top" Margin="10,377,0,0" Height="41"/>
+                    <Rectangle HorizontalAlignment="Left" Height="60" Stroke="Black" VerticalAlignment="Top" Width="170" Margin="248,437,0,0" RadiusY="15" RadiusX="15">
+                        <Rectangle.Fill>
+                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                <GradientStop Color="Black" Offset="1"/>
+                                <GradientStop Color="#FFF71414"/>
+                            </LinearGradientBrush>
+                        </Rectangle.Fill>
+                    </Rectangle>
+                    <Button x:Name="submitforgetpassword"  Content="Gửi" HorizontalAlignment="Left" BorderBrush="Transparent" VerticalAlignment="Top" Margin="248,425,0,0" Width="170" Click="submitforgetpassword_Click"/>
+                    <TextBox x:Name="email" HorizontalAlignment="Left" Height="63" TextWrapping="Wrap" Text="example@domain.com" VerticalAlignment="Top" Width="312" Margin="144,357,0,0" FontSize="21.333"/>
+                    <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Cách lấy lại mật khẩu khi đã mất và những cam kết." VerticalAlignment="Top" Width="446" Height="330"/>
+                </Grid>
+
+            </phone:PivotItem>
+
+            <!--hide -->
             <!--Pivot item two-->
 
         </phone:Pivot>
