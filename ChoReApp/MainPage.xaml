@@ -54,7 +54,7 @@
             <phone:PivotItem Header="Chi tiết sản phẩm"/>
             <phone:PivotItem Header="Sp trên map"/>
             <phone:PivotItem Header="Danh sách yêu thích"/>
-
+            <phone:PivotItem Header="Quên mật khẩu"/><!--hide -->
             <!--Pivot item two-->
 
         </phone:Pivot>
