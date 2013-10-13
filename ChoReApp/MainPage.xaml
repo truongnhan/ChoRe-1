@@ -9,6 +9,7 @@
     xmlns:DangKy="clr-namespace:DangKy;assembly=DangKy"
     xmlns:Search="clr-namespace:Search;assembly=Search"
     xmlns:formPostGoods="clr-namespace:formPostGoods;assembly=formPostGoods"
+    xmlns:maps="clr-namespace:Microsoft.Phone.Maps.Controls;assembly=Microsoft.Phone.Maps"
     x:Class="ChoReApp.MainPage"
     mc:Ignorable="d"
     FontFamily="{StaticResource PhoneFontFamilyNormal}"
@@ -40,6 +41,13 @@
             CurrentUICulture of the app at run time.
          -->
 
+        <!--Uncomment to see an alignment grid to help ensure your controls are
+            aligned on common boundaries.  The image has a top margin of -32px to
+            account for the System Tray. Set this to 0 (or remove the margin altogether)
+            if the System Tray is hidden.
+
+            Before shipping remove this XAML and the image itself.-->
+        <!--<Image Source="/Assets/AlignmentGrid.png" VerticalAlignment="Top" Height="800" Width="480" Margin="0,-32,0,0" Grid.Row="0" Grid.RowSpan="2" IsHitTestVisible="False" />-->
         <!--TitlePanel contains the name of the application and page title-->
         <phone:Pivot x:Name="chore" Title="" Background="#FF7597D3">
             <phone:PivotItem Header="Tìm sản phẩm" >
@@ -62,7 +70,7 @@
                 </Grid>
             </phone:PivotItem>
             <phone:PivotItem  Header="Đăng Nhập" Margin="-83,-47,10,75">
-                <Login:controllogin x:Name="formlogin" HorizontalAlignment="Left" Height="632" VerticalAlignment="Top" Width="569" Margin="10,0,-26,-29"/>
+                <Login:controllogin x:Name="formlogin" HorizontalAlignment="Left" Height="632" VerticalAlignment="Top" Width="569" Margin="10,56,-26,-54"/>
             </phone:PivotItem>
             <phone:PivotItem Header="Đăng Ký" RenderTransformOrigin="0.956,0.022" Margin="10,0,14,28">
                 <DangKy:controldk HorizontalAlignment="Left" Height="675" VerticalAlignment="Top" Width="497" Margin="-17,-56,-24,-16"/>
@@ -71,7 +79,9 @@
                 <formPostGoods:formPost HorizontalAlignment="Left" Height="700" VerticalAlignment="Top" Width="515" Margin="-23,-102,-36,0"/>
             </phone:PivotItem>
             <phone:PivotItem Header="Chi tiết sản phẩm"/>
-            <phone:PivotItem Header="Sp trên map"/>
+            <phone:PivotItem Header="Sp trên map">
+                <maps:Map HorizontalAlignment="Left" Height="624" VerticalAlignment="Top" Width="456"/>
+            </phone:PivotItem>
             <phone:PivotItem Header="Danh sách yêu thích"/>
             <phone:PivotItem Header="Quên mật khẩu">
                 <Grid x:Name="forgetpass" Background="Transparent">
@@ -97,13 +107,6 @@
 
         </phone:Pivot>
 
-        <!--Uncomment to see an alignment grid to help ensure your controls are
-            aligned on common boundaries.  The image has a top margin of -32px to
-            account for the System Tray. Set this to 0 (or remove the margin altogether)
-            if the System Tray is hidden.
-
-            Before shipping remove this XAML and the image itself.-->
-        <!--<Image Source="/Assets/AlignmentGrid.png" VerticalAlignment="Top" Height="800" Width="480" Margin="0,-32,0,0" Grid.Row="0" Grid.RowSpan="2" IsHitTestVisible="False" />-->
     </Grid>
 
 </phone:PhoneApplicationPage>

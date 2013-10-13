@@ -8,7 +8,10 @@ using System.Threading.Tasks;
 namespace ChoReApp
 {
    public class ViewModal
-    {
+    {   
+       /// <summary>
+       /// danh sách sản phẩm hiển thị trên tìm kiếm.
+       /// </summary>
         public ObservableCollection<Goods> item = new ObservableCollection<Goods>();
         public ViewModal()
         {
