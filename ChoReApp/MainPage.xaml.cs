@@ -17,9 +17,26 @@ namespace ChoReApp
         public MainPage()
         {
             InitializeComponent();
-
+            formlogin.clickSignUp+=formlogin_clickSignUp;
+            formlogin.ClickForgetPassword+=formlogin_ClickForgetPassword;
+            listgoods.ItemsSource = App.listgoods.item;
             // Sample code to localize the ApplicationBar
             //BuildLocalizedApplicationBar();
+        }
+
+        private void formlogin_ClickForgetPassword()
+        {
+            chore.SelectedIndex = 7;
+        }
+
+        private void formlogin_clickSignUp()
+        {
+            chore.SelectedIndex = 2;
+        }
+        
+        private void submitforgetpassword_Click(object sender, RoutedEventArgs e)//xu ly submit quen mat khau
+        {
+            MessageBox.Show("Xử lý gửi mail về cho mail đăng ký");
         }
 
         // Sample code for building a localized ApplicationBar

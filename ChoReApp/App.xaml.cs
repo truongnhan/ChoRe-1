@@ -17,7 +17,7 @@ namespace ChoReApp
         /// </summary>
         /// <returns>The root frame of the Phone Application.</returns>
         public static PhoneApplicationFrame RootFrame { get; private set; }
-
+        public static ViewModal listgoods = new ViewModal();
         /// <summary>
         /// Constructor for the Application object.
         /// </summary>

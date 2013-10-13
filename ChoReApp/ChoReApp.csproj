@@ -93,6 +93,7 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+<<<<<<< HEAD
     <Compile Include="Component\Account.cs" />
     <Compile Include="Component\Comment.cs" />
     <Compile Include="Component\Guest.cs" />
@@ -100,6 +101,9 @@
     <Compile Include="Component\Location.cs" />
     <Compile Include="Component\OfficalUser.cs" />
     <Compile Include="Component\User.cs" />
+=======
+    <Compile Include="Goods.cs" />
+>>>>>>> d4ec56d8b9f954e5a47d35ce3f6a07ff9b2436cc
     <Compile Include="LocalizedStrings.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
@@ -110,6 +114,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>AppResources.resx</DependentUpon>
     </Compile>
+    <Compile Include="ViewModal.cs" />
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
@@ -147,12 +152,27 @@
     <Content Include="Assets\Tiles\IconicTileSmall.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="avatar.jpg" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Resources\AppResources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>AppResources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="dangky">
+      <HintPath>..\..\..\..\desktop\chore\choreapp\dll\dangky.dll</HintPath>
+    </Reference>
+    <Reference Include="formpostgoods">
+      <HintPath>..\..\..\..\desktop\chore\choreapp\dll\formpostgoods.dll</HintPath>
+    </Reference>
+    <Reference Include="login">
+      <HintPath>dll\login.dll</HintPath>
+    </Reference>
+    <Reference Include="search">
+      <HintPath>..\..\..\..\desktop\chore\choreapp\dll\search.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).$(TargetFrameworkVersion).Overrides.targets" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).CSharp.targets" />
