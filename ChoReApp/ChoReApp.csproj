@@ -93,6 +93,13 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Component\Account.cs" />
+    <Compile Include="Component\Comment.cs" />
+    <Compile Include="Component\Guest.cs" />
+    <Compile Include="Component\Item.cs" />
+    <Compile Include="Component\Location.cs" />
+    <Compile Include="Component\OfficalUser.cs" />
+    <Compile Include="Component\User.cs" />
     <Compile Include="LocalizedStrings.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
